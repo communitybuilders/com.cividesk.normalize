@@ -61,7 +61,11 @@
         <tr class="crm-cividesk-normalize-form-block">
           <td class="label">&nbsp;</td>
           <td>{$form.address_CityCaps.html}</td>
-        </tr>        
+        </tr>
+        <tr class="crm-cividesk-normalize-form-block">
+          <td class="label">&nbsp;</td>
+          <td>{$form.address_CountryCaps.html}</td>
+        </tr>
         <tr class="crm-cividesk-normalize-form-block">
           <td class="label">&nbsp;</td>
           <td>{$form.address_Zip.html} {$form.address_Zip.label}</td>

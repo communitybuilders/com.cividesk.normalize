@@ -244,6 +244,16 @@ class CRM_Utils_Normalize {
         $address['city'] = ucwords(strtolower($city));
       }
     }
+
+    if ($value = CRM_Utils_Array::value('address_CountryCaps', $this->_settings)) {
+      $country = CRM_Utils_Array::value('country', $address);
+      if ($value == 1 && $country) {
+        $address['country'] = strtoupper($country);
+      } elseif($value == 2 && $country) {
+        $address['country'] = ucwords(strtolower($country));
+      }
+    }
+
     if ($value = CRM_Utils_Array::value('address_StreetCaps', $this->_settings)) {
       foreach( array('street_address','supplemental_address_1', 'supplemental_address_2') as $name) { 
         $addressValue = CRM_Utils_Array::value($name, $address);

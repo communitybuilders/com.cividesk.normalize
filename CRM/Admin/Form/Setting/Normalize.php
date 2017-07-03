@@ -77,6 +77,14 @@ class CRM_Admin_Form_Setting_Normalize extends CRM_Admin_Form_Setting {
     );
     $this->addRadio( 'address_CityCaps', ts(''), $options );
 
+    // Added by CommunityBuilders.
+    $country_options = [
+      'O' => ts('Country no format'),
+      '1' => ts('Capitalize country names'),
+      '2' => ts('Capitalize first letter of each word in country names')
+    ];
+    $this->addRadio( 'address_CountryCaps', ts(''), $country_options );
+
     $optionsStreet = array(
       'O' => ts('Street Address no format'),
       '1' => ts('Capitalize Street Address'),
